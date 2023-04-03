@@ -1,16 +1,24 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+
+import { GlobalStyle } from "./GlobalStyles";
+import { Layout, MainTitle, Title } from "./Layout/Layout";
+import ContactList from './ContactList'
+import ContactForm from "./ContactForm";
+import Filter from "./Filter";
+
+
+
+const App = () => {
+    return (
+        <Layout>
+          <MainTitle>Phonebook</MainTitle>
+          <ContactForm/>
+          <Title>Contacts</Title>
+          <Filter/>
+          <ContactList/>
+        <GlobalStyle/>
+        </Layout>
+    );
+  };
+
+export default App; 
+
